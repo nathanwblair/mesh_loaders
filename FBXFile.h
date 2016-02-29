@@ -10,7 +10,7 @@
 #include "glm/gtc/quaternion.hpp"
 #include "glm/gtc/epsilon.hpp"
 
-#include "utils/memaligned.h"
+#include "memaligned.h"
 
 struct ImportAssistor;
 

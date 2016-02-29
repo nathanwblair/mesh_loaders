@@ -1,8 +1,8 @@
 #include "FBXFile.h"
 
-#include "graphics/RefEngOpenGL.h"
+#include "gl_core_4_4.h"
 
-#include "utils/pow2assert.h"
+#include "pow2assert.h"
 
 #include <fbxsdk.h>
 #include <algorithm>
