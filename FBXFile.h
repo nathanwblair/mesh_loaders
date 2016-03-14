@@ -387,6 +387,30 @@ public:
 	FBXAnimation*	getAnimationByIndex(unsigned int a_index);
 	FBXTexture*		getTextureByIndex(unsigned int a_index);
 
+	////// User modifications: 
+	// (credit to https://github.com/johnsietsma/RefEngine/blob/4fbfe5e01cd97d1522e8ec273a396e41e29d3b29/Engine/src/fbx/FBXFile.h)
+
+	const std::vector<FBXMeshNode*>& getMeshes() const { return m_meshes; }
+	const std::map<std::string, FBXLightNode*>& getLights() const 
+	{
+		return m_lights;
+	}
+	const std::map<std::string, FBXCameraNode*>& getCameras() const 
+	{ 
+		return m_cameras;
+	}
+
+	// Non-const to allow evaluation
+	std::vector<FBXSkeleton*>& getSkeletons() 
+	{ 
+		return m_skeletons;
+	} 
+
+	const std::map<std::string, FBXAnimation*>& getAnimations() const 
+	{
+		return m_animations;
+	}
+
 	ALIGNED_NEW_OP_16
 	ALIGNED_DELETE_OP
 
